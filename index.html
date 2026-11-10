@@ -1,39 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Foxstone Builders | Nashville</title>
-<meta name="description" content="Foxstone Builders, custom luxury homes in Nashville, Tennessee. New website coming soon.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Libre+Franklin:wght@400;500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Foxstone Builders | Custom Homes in Nashville, TN</title>
+<meta name="description" content="Foxstone Builders designs and builds custom homes in Nashville, Tennessee. Clever where it counts. Solid where it matters.">
+<link rel="canonical" href="https://buildfoxstone.com/">
+<meta name="theme-color" content="#F6F0E5">
+
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Foxstone Builders">
+<meta property="og:title" content="Foxstone Builders | Custom Homes in Nashville, TN">
+<meta property="og:description" content="Clever where it counts. Solid where it matters. Custom homes in Nashville, Tennessee.">
+<meta property="og:url" content="https://buildfoxstone.com/">
+<meta property="og:image" content="https://buildfoxstone.com/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Foxstone Builders logo on a warm cream background">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Foxstone Builders | Custom Homes in Nashville, TN">
+<meta name="twitter:description" content="Clever where it counts. Solid where it matters. Custom homes in Nashville, Tennessee.">
+<meta name="twitter:image" content="https://buildfoxstone.com/assets/og-image.jpg">
+<meta name="twitter:image:alt" content="Foxstone Builders logo on a warm cream background">
+
+<link rel="preload" href="assets/fonts/display-regular.woff2" as="font" type="font/woff2" crossorigin>
 <style>
-:root{--bg:#f3eee4;--ink:#2b2e26;--muted:#6c6a5d;--line:#e1d9ca;--accent:#3e4a33;--brass:#a8844f}
+@font-face{font-family:"Foxstone Display";src:url("assets/fonts/display-regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Foxstone Display";src:url("assets/fonts/display-italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+
+:root{
+  --cream:#F6F0E5;   /* logo background */
+  --brown:#332819;   /* logo ink */
+  --brown-soft:#4a3b28;
+  --display:"Foxstone Display",Georgia,"Times New Roman",serif;
+  --body:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
 *{box-sizing:border-box;margin:0;padding:0}
-html,body{height:100%}
-body{background:var(--bg);color:var(--ink);font-family:"Libre Franklin",system-ui,-apple-system,"Segoe UI",sans-serif;display:flex;flex-direction:column;min-height:100vh}
-main{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:48px 24px}
-.mark{width:56px;height:56px;border:1.5px solid var(--brass);transform:rotate(45deg);margin-bottom:40px;display:flex;align-items:center;justify-content:center}
-.mark span{transform:rotate(-45deg);font-family:"Cormorant Garamond",Georgia,serif;font-size:24px;font-weight:600;color:var(--accent)}
-h1{font-family:"Cormorant Garamond",Georgia,serif;font-weight:500;font-size:clamp(40px,7vw,72px);letter-spacing:.02em;line-height:1.05;color:var(--accent)}
-.rule{width:64px;height:1px;background:var(--brass);margin:28px auto}
-.tag{font-size:13px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted)}
-p.lede{margin-top:28px;max-width:30em;font-size:16px;line-height:1.7;color:var(--muted)}
-a{color:var(--accent);text-decoration:none;border-bottom:1px solid var(--brass);padding-bottom:1px}
-a:hover{color:var(--brass)}
-footer{padding:24px;text-align:center;font-size:12px;letter-spacing:.06em;color:var(--muted);border-top:1px solid var(--line)}
+html{background:var(--cream);-webkit-text-size-adjust:100%}
+body{
+  min-height:100vh;min-height:100svh;
+  display:flex;flex-direction:column;
+  background:var(--cream);color:var(--brown);
+  font-family:var(--body);font-size:1rem;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+}
+main{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:clamp(40px,8vh,96px) 24px;
+}
+.logo{margin:0;line-height:0}
+.logo img{display:block;width:clamp(260px,72vw,640px);height:auto}
+
+.rule{width:48px;height:1px;background:var(--brown);opacity:.5;margin:clamp(28px,5vh,56px) auto}
+
+.tagline{
+  font-family:var(--display);font-weight:400;
+  font-size:clamp(1.6rem,1.05rem + 2.6vw,3rem);line-height:1.2;letter-spacing:.005em;
+}
+.tagline span{display:block}
+.tagline em{font-style:italic}
+
+.location{
+  margin-top:clamp(20px,3vh,32px);
+  font-size:.8125rem;letter-spacing:.24em;text-transform:uppercase;color:var(--brown-soft);
+  text-wrap:balance;
+}
+
+.contact{margin-top:clamp(28px,5vh,52px);font-size:1.0625rem}
+.contact a{
+  color:var(--brown);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:.3em;
+  padding:.6em .4em;border-radius:2px;transition:text-decoration-color .3s;
+}
+.contact a:hover{text-decoration-color:transparent}
+.contact a:focus-visible{outline:2px solid var(--brown);outline-offset:3px}
+
+footer{padding:24px 24px 32px;text-align:center;font-size:.8125rem;color:var(--brown-soft)}
+
+/* one quiet fade-in on load, no looping */
+@keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.logo,.rule,.tagline,.location,.contact{animation:rise 1.2s cubic-bezier(.22,.61,.36,1) both}
+.rule{animation-delay:.35s}
+.tagline{animation-delay:.55s}
+.location{animation-delay:.75s}
+.contact{animation-delay:.95s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+@media (min-width:1600px){html{font-size:112.5%}}
 </style>
 </head>
 <body>
 <main>
-  <div class="mark" aria-hidden="true"><span>F</span></div>
-  <h1>Foxstone Builders</h1>
-  <div class="rule"></div>
-  <div class="tag">Custom Homes &middot; Nashville, Tennessee</div>
-  <p class="lede">Our new website is on the way. In the meantime, reach us at <a href="mailto:info@buildfoxstone.com">info@buildfoxstone.com</a>.</p>
+  <h1 class="logo"><img src="assets/foxstone-logo.svg" width="1337" height="639" alt="Foxstone Builders"></h1>
+  <div class="rule" role="presentation"></div>
+  <p class="tagline"><span>Clever where it counts.</span><span><em>Solid where it matters.</em></span></p>
+  <p class="location">Custom homes in Nashville, Tennessee.</p>
+  <p class="contact"><a href="mailto:info@buildfoxstone.com">info@buildfoxstone.com</a></p>
 </main>
 <footer>&copy; <span id="y">2026</span> Foxstone Builders LLC</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<script>document.getElementById("y").textContent=new Date().getFullYear()</script>
 </body>
 </html>
