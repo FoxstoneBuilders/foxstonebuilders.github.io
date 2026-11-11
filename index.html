@@ -79,6 +79,9 @@ main{
 .contact a:hover{text-decoration-color:transparent}
 .contact a:focus-visible{outline:2px solid var(--brown);outline-offset:3px}
 
+.contact .sep{margin:0 .5em;color:var(--brown-soft)}
+@media (max-width:480px){.contact a{display:inline-block}.contact .sep{display:none}.contact a+.sep+a{display:block;margin-top:.25em}}
+
 footer{padding:24px 24px 32px;text-align:center;font-size:.8125rem;color:var(--brown-soft)}
 
 /* one quiet fade-in on load, no looping */
@@ -99,7 +102,7 @@ footer{padding:24px 24px 32px;text-align:center;font-size:.8125rem;color:var(--b
   <div class="rule" role="presentation"></div>
   <p class="tagline"><span>Clever where it counts.</span><span><em>Solid where it matters.</em></span></p>
   <p class="location">Custom homes in Nashville, Tennessee.</p>
-  <p class="contact"><a href="mailto:info@buildfoxstone.com">info@buildfoxstone.com</a></p>
+  <p class="contact"><a href="mailto:info@buildfoxstone.com">info@buildfoxstone.com</a><span class="sep" aria-hidden="true">&middot;</span><a href="tel:+16292603690">(629) 260-3690</a></p>
 </main>
 <footer>&copy; <span id="y">2026</span> Foxstone Builders LLC</footer>
 <script>document.getElementById("y").textContent=new Date().getFullYear()</script>
